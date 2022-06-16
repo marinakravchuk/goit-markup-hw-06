@@ -357,22 +357,37 @@
                 </svg>
             
         </botton>
-<p>Оставьте свои данные, мы вам перезвоним</p>
+
+    <p>Оставьте свои данные, мы вам перезвоним</p>
+
         <form>
+            <div class="form-field">
             <label for="name"> Имя  </label> 
-            <input type="text" id="name"> 
-             
+            <input type="text" id="name" /> 
+            </div>
+
+            <div class="form-field">
             <label for="tel">Телефон</label>
             <input type="tel" id="tel">
-            
+            </div>
+
+            <div class="form-field">
             <label for="email">Почта</label>
-            <input type="email" id="email">
-            
+            <input type="email" id="email" />
+            </div>
+
+            <div class="form-field">
             <label for="coment">Комментарий</label>
-                        
-<textarea name="coment" id="coment"  rows="10"></textarea>
-            <button type="submit">Отправить</button>
-        </form>
+            <textarea name="coment" id="coment"  rows="10"placeholder="Введите текст"></textarea>
+            </div>
+
+            <div class="form-field">
+            <input type="checkbox" name="policy" id="policy"  />
+            <label for="policy">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+            </div>
+
+            <button type="submit" disabled>Отправить</button>
+            </form>
         </div>
         
         </div>
@@ -380,57 +395,65 @@
         <script src="./js/modal.js">
                     </script>
 </body>
+
 <footer>
     <section class="s-footer">
-        <div class="container footer">
-            <div class="logo-adress">
-                <a href="./index.html" class="logo"><span class="logo-color">Web</span><span
-                        class="bottom-logo-color">Studio</span></a>
-                <address>
-                    <ul class="contact-link-list">
-                        <li class="item"><a href="https://g.page/stamp-capital?share" class="addres-link"
-                                target="_blank" rel="noopener nofollow noreferrer">г. Киев,
-                                пр-т Леси Украинки, 26</a></li>
-                        <li class="item"><a href="mailto:info@devstudio.com" class="e-link">info@devstudio.com</a></li>
+    <div class="container footer">
+    <div class="logo-adress">
+        <a href="./index.html" class="logo"><span class="logo-color">Web</span><span class="bottom-logo-color">Studio</span></a>
+        <address>
+        <ul class="contact-link-list">
+        <li class="item">
+        <a href="https://g.page/stamp-capital?share" 
+                            class="addres-link"
+                            target="_blank" rel="noopener nofollow noreferrer">г. Киев, пр-т Леси Украинки, 26
+                        </a>
+        </li>
+
+        <li class="item"><a href="mailto:info@devstudio.com" class="e-link">info@devstudio.com</a></li>
                         <li class="item"><a href="tel:+380961111111" class="ph-link">+38 096 111 11 11</a></li>
                     </ul>
-                </address>
-            </div>
-            <div class="footer-soc">
-                <p class="title-soc">Присоединяйтесь</p>
-                <ul class="footer-soc-list">
-                    <li class="footer-soc-item">
-                        <a class="footer-soc-link" href="">
-                            <svg class="footer-soc-icon" width="20" height="20">
-                                <use href="./images/symbol-defs.svg#icon-instagram-2"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-soc-item">
-                        <a class="footer-soc-link" href="">
-                            <svg class="footer-soc-icon" width="20" height="20">
-                                <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-soc-item">
-                        <a class="footer-soc-link" href="">
-                            <svg class="footer-soc-icon" width="20" height="20">
-                                <use href="./images/symbol-defs.svg#icon-facebook-1"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-soc-item">
-                        <a class="footer-soc-link" href="">
-                            <svg class="footer-soc-icon" width="20" height="20">
-                                <use href="./images/symbol-defs.svg#icon-linkedin-1"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+        </address>
+    </div>
 
-            </div>
-        </div>
+    <div class="footer-soc">
+        <p class="title-soc">Присоединяйтесь</p>
+        <ul class="footer-soc-list">
+        <li class="footer-soc-item">
+        <a class="footer-soc-link" href="">
+        <svg class="footer-soc-icon" width="20" height="20">
+        <use href="./images/symbol-defs.svg#icon-instagram-2"></use>
+        </svg>
+        </a>
+        </li>
+
+        <li class="footer-soc-item">
+        <a class="footer-soc-link" href="">
+        <svg class="footer-soc-icon" width="20" height="20">
+        <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
+        </svg>
+        </a>
+        </li>
+        
+        <li class="footer-soc-item">
+        <a class="footer-soc-link" href="">
+        <svg class="footer-soc-icon" width="20" height="20">
+        <use href="./images/symbol-defs.svg#icon-facebook-1"></use>
+        </svg>
+        </a>
+        </li>
+        
+        <li class="footer-soc-item">
+        <a class="footer-soc-link" href="">
+        <svg class="footer-soc-icon" width="20" height="20">
+        <use href="./images/symbol-defs.svg#icon-linkedin-1"></use>
+        </svg>
+        </a>
+        </li>
+        </ul>
+
+    </div>
+    </div>
     </section>
 </footer>
 
