@@ -862,7 +862,7 @@ box-shadow var(--timing-duration) var(--timing-function);
     opacity: 0;
   }
 
-.modal-bnt-close {
+/*.modal-bnt-close {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -878,12 +878,29 @@ box-shadow var(--timing-duration) var(--timing-function);
     border-radius: 50%;
     fill: #000000;
     transition: fill var(--timing-duration) var(--timing-function);
+}*/
+
+
+.modal-bnt-close {
+position: absolute;
+right: 8px;
+top: 8px;
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background-color: transparent;
+cursor: pointer;
+border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .modal-bnt-close:hover,
 .modal-bnt-close:focus {
   fill: var(--btn-color-hb);
 }
+
+textarea {
+resize: none;
+} 
 
 /*Подвал*/
 .logo-adress {
