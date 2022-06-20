@@ -961,18 +961,23 @@ box-shadow var(--timing-duration) var(--timing-function);
     letter-spacing: 0.01em;
     margin-bottom: 4px;
     color: #757575;
-  }
+    }
 
-
-  textarea {
+/*Форма*/
+    textarea {
     resize: none;
     } 
-  
+
+    .checkbox {
+    appearance: none;
+    }
+
+
     .modal-text {
         padding: 12px 16px;
         width: 100%;
         height: 120px;
-       
+
         border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
         resize: none;
@@ -982,13 +987,12 @@ box-shadow var(--timing-duration) var(--timing-function);
     
     .modal-text:focus,
     .modal-text:hover
-     {
+    {
         border: 1px solid #2196F3;
     }
-  
 
-/*Форма*/
 .covenant {
+    position: relative;
     width: 16px;
     height: 15px;
     border: 2px solid #212121;
@@ -1004,6 +1008,42 @@ box-shadow var(--timing-duration) var(--timing-function);
     border-color: var(--btn-color-hb);
 }
 
+.covenant-title  {
+    padding-left: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+
+.covenant-title::before{
+    content: " ";
+    display: block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    background-color: rgb(216, 49, 49);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+}
+
+.covenant-title::after {
+    content: "";
+    display: block;
+    width: 11px;
+    height: 8px;
+    background: url(../images/symbol-defs8.svg#icon-Vector-3-1);
+    background-size: 16px 15px;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 2;
+}
 
 /*
 
@@ -1292,50 +1332,46 @@ margin-right: 93px;
 }
 
 
-.footer-input:focus{
-    border: var(--btn-color-hb);
+.footer-input:focus,
+.footer-input:hover {
+    border-color: var(--btn-color-hb);
     }
 
-
-
-
-
 .footer-btn {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 200px;
-  height: 50px;
-  background-color: var(--btn-color-hb);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border-color: transparent;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: calc(30 / 16);
-  padding-left: 29px;
-  color: #ffffff;
-  fill: currentColor;;
-  transition: fill var(--timing-duration) var(--timing-function);
-  transition: background-color var(--timing-duration) var(--timing-function);
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    background-color: var(--btn-color-hb);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: transparent;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    padding-left: 29px;
+    color: #ffffff;
+    fill: currentColor;;
+    transition: fill var(--timing-duration) var(--timing-function);
+    transition: background-color var(--timing-duration) var(--timing-function);
 }
 
 .footer-btn:hover,
 .footer-btn:focus {
-  background-color: #ffffff;
-  color: var(--btn-color-hb);
+    background-color: #ffffff;
+    color: var(--btn-color-hb);
 }
 
 .icon-send {
-  position: absolute;
-  right: 28px;
-  margin-left: 10px;
- 
+    position: absolute;
+    right: 28px;
+    margin-left: 10px;
 }
 
 .icon-send:hover,
 .icon-send:focus {
-  background-color: #ffffff;
-  color: var(--btn-color-hb);
-  fill:  var(--btn-color-hb);
+    background-color: #ffffff;
+    color: var(--btn-color-hb);
+    fill:  var(--btn-color-hb);
 }
