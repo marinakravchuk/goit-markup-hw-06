@@ -920,13 +920,10 @@ box-shadow var(--timing-duration) var(--timing-function);
   .modal-field {
     margin-bottom: 10px;
 
-  }
+  }/*
       transition: border 250ms var(--timing-function);
-  }
+  }*/
   
-  .modal-input:focus {
-    border-color: #2196F3;
-  }
   
   .input-wrap {
     position: relative;
@@ -944,22 +941,22 @@ box-shadow var(--timing-duration) var(--timing-function);
     height: 45px;
     border: 1px solid #999999;
     border-radius: 5px;
-    
+    fill: currentColor;
     padding-left: 30px;
     outline: none;
-    transition: border-color 250ms var(--timing-function);
+    transition: border-color 250ms var(--timing-function), 
+    fill 250ms var(--timing-function) ;
   }
   
-  .modal-input:focus {
+  .modal-input:focus,
+  .modal-input:hover {
     border-color: #2196F3;
   }
   
-  .modal-icon {
-    fill: currentColor;
-    transition: fill 250ms var(--timing-function) 
-  }
 
-  .modal-input:focus + .modal-icon {
+  .modal-input:focus + .modal-icon,
+  .modal-input:hover + .modal-icon
+   {
     fill: #2196F3;
   }
   
@@ -992,7 +989,9 @@ box-shadow var(--timing-duration) var(--timing-function);
         transition: border 250ms var(--transition-cubic);
     }
     
-    .modal-text:focus {
+    .modal-text:focus,
+    .modal-text:hover
+     {
         border: 1px solid #2196F3;
     }
   
