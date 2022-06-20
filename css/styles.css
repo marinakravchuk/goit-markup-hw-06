@@ -982,18 +982,15 @@ box-shadow var(--timing-duration) var(--timing-function);
 }
 
 .modal-text:focus,
-.modal-text:hover
-{
+.modal-text:hover {
     border: 1px solid #2196F3;
 }
 
 
-    .checkbox {
+    .checkbox-policy {
     position: absolute;
+    appearance: none;
     }
-
-
-
 
 .covenant {
     position: relative;
@@ -1026,20 +1023,28 @@ box-shadow var(--timing-duration) var(--timing-function);
     border-radius: 2px;
     position: relative;
 } 
-/*
-.checkbox:checked + .covenant-title span {
-    background-color: #2196F3;
-    border: none;
-}*/
+
+.checkbox-policy:focus + .checkbox-icon {
+    outline: 1px solid #212121;
+}
 
 .checkbox:checked + .checkbox-icon {
-    background-image: url(../images/symbol-defs8.svg#icon-Vector-3-1);
+    background-image: url("../images/symbol-defs8.svg#icon-Vector-3-1");
     background-size: contain;
-    background-origin: border-box ;
+    background-origin: border-box;
     outline: transparent;
     background-color: #2196F3;
     border-color:  #2196F3;
 } 
+
+.covenant-link {
+    transition: color var(--timing-duration) var(--timing-function);
+}
+
+.covenant-link:hover,
+.covenant-link:focus {
+    color:#2196F3 ;
+}
 
 
 .modal-bnt-send {
