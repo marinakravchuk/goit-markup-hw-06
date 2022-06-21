@@ -51,6 +51,18 @@ img {
     font-style: normal;
 }
 
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+
 .e-link {
     text-decoration: none;
     font-style: normal;
@@ -986,24 +998,13 @@ box-shadow var(--timing-duration) var(--timing-function);
     border: 1px solid #2196F3;
 }
 
+/*Чекбокс*/
 
-    .checkbox-policy {
-    position: absolute;
-    appearance: none;
-    }
-
-.covenant {
-    position: relative;
-    border-radius: 2px;
-    margin-right: 5px;
+.covenant{
     display: flex;
     align-items: center;
-    justify-content: center;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.covenant:focus  {
-    border-color: var(--btn-color-hb);
+    margin-bottom: 30px; ;
+    
 }
 
 .covenant-title  {
@@ -1013,52 +1014,60 @@ box-shadow var(--timing-duration) var(--timing-function);
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: #757575;
-}
 
+    display: flex;
+    align-items: center;
+    }
 
-.checkbox-icon {
+.covenant-title::before {
+    content: "";
     width: 16px;
     height: 15px;
-    border: 2px solid #212121;
-    border-radius: 2px;
-    position: relative;
+    border: 2px solid  #212121;
+    border-radius: 3px;
+    margin-right: 8px;
 } 
 
-.checkbox-policy:focus + .checkbox-icon {
-    outline: 1px solid #212121;
+.checkbox-policy:checked +.covenant-title::before {
+    background-color: #2196F3;
+    background-image: url(../images/icon/checkbox.svg);
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.checkbox-policy:focus +.covenant-title::before {
+    border-color: #2196F3;
 }
 
-.checkbox:checked + .checkbox-icon {
-    background-image: url("../images/symbol-defs8.svg#icon-Vector-3-1");
-    background-size: contain;
-    background-origin: border-box;
-    outline: transparent;
-    background-color: #2196F3;
-    border-color:  #2196F3;
-} 
+.checkbox-policy:focus:not(:checked) +.covenant-title::before {
+    border-color: #2196F3;
+  }
+
+  .checkbox-policy:disabled +.covenant-title::before {
+    border-color: #2196F3;
+  }
 
 .covenant-link {
-    transition: color var(--timing-duration) var(--timing-function);
+    display: block;
+    padding-left: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #2196F3;
 }
 
-.covenant-link:hover,
-.covenant-link:focus {
-    color:#2196F3 ;
-}
-
-
-.modal-bnt-send {
+    .modal-bnt-send {
     
         width: 200px;
         height: 50px;
         display: block;
         margin: 0 auto;
     
-    
         background: var(--btn-color-hb);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
-    
     
         font-family: 'Roboto';
         font-style: normal;
@@ -1070,10 +1079,10 @@ box-shadow var(--timing-duration) var(--timing-function);
         transition: background var(--timing-duration) var(--timing-function);
     }
     
+
     .modal-bnt-send:hover,
     .modal-bnt-send:focus {
         background: #188CE8;
-        
     }
 
 
